@@ -1,0 +1,14 @@
+{
+  "name": "toulk",
+  "description": "Toulk.com",
+  "version": "0.0.0",
+  "main": "./server.js",
+  "dependencies": {
+    "derby": "*",
+    "derby-ui-boot": "*",
+    "express": "3.0.0beta4",
+    "gzippo": ">=0.1.7",
+    "racer-db-mongo": "*"
+  },
+  "private": true
+}

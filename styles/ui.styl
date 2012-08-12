@@ -1,0 +1,165 @@
+.connection {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 2000;
+}
+.connection > .alert {
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  padding-right: 14px;
+  display: inline-block;
+}
+
+.autoSuggest {
+    width:100%;
+}
+
+.autoSuggest > .autoSuggestBox {
+    background-color: white;
+    border: 1px solid #CCC;
+    font-size:12px;
+    width:100%;
+    cursor: text;
+    height: 20px;
+    padding: 4px;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.autoSuggest > .autoSuggestBox > input, .autoSuggestBox > input:focus{
+    padding:0px;
+    margin:0px;
+    border:0px;
+    background-color: transparent;
+    outline:0px !important;
+    -webkit-appearance:none;
+    outline:none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    max-width:25%;
+    margin-top:3px;
+}
+
+.autoSuggest > .focused {
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+}
+
+.autoSuggest > .autosuggest-menu .focused {
+    display:block;
+}
+
+.autoSuggest > .autosuggest-menu {
+    max-height:115px; 
+    overflow: hidden;
+    width:100%;
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 4px 0;
+    margin: 1px 0 0;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;  
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;  
+}
+.autoSuggest > .autosuggest-menu a {
+    cursor: default;
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.autoSuggest > .autosuggest-menu a:hover {
+    color:white;
+}
+
+.autoSuggest > .autosuggest-menu > li:hover {
+    background-color:#366DDC;
+}
+
+
+.autoSuggest > .autoSuggestBox > ul.selections {
+    list-style:none;
+    margin: -1px 0px 0px 0px;
+}
+
+.autoSuggest > .autoSuggestBox > ul.selections li:hover.selection-item {
+    color: #2B3840;
+    background-color: #BBD4F1;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBD4F1), to(#A3C2E5));
+    border-color: #6DA0E0;
+    border-top-color: #8BB7ED;
+}
+
+.autoSuggest > .autoSuggestBox > ul.selections li.selection-item {
+    color: #2B3840;
+    font-size:12px;
+    text-shadow: 0 1px 1px white;
+    background-color: #DDEEFE;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDEEFE), to(#BFE0F1));
+    border: 1px solid #ACC3EC;
+    border-top-color: #C0D9E9;
+    padding: 0px 5px 0px 10px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    box-shadow: 0 1px 1px #e4edf2;
+    -webkit-box-shadow: 0 1px 1px #e4edf2;
+    -moz-box-shadow: 0 1px 1px #e4edf2;
+}
+.autoSuggest > .autoSuggestBox > ul.selections li {
+    float: left;
+    margin: 1px 4px 1px 0;
+}
+
+.autoSuggest > .autoSuggestBox > ul.selections li.selection-item a.close {
+    float: right;
+    margin: 0px 0px 0px 2px;
+    padding: 0 2px;
+    cursor: pointer;
+    color: #000;    
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px white;
+    -webkit-transition: color .1s ease-in;
+}

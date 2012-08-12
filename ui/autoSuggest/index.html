@@ -1,0 +1,20 @@
+<autoSuggest:>
+    <div class="autoSuggest">
+        <div x-as="searchcontainer" x-bind="click: setFocusCls focusInput" class="{{{cls}}}">
+            {{{#if selecteditems}}}
+                <ul class="selections">
+                    {{{#each selecteditems}}}
+                    <li class="selection-item"><a class="close" x-bind="click: deleteItem">x</a>{{{text}}}</li>
+                    {{{/}}}
+                </ul>            
+            {{{/}}}
+            <input x-as="searchinput" x-bind="focus: setFocusCls" value="{{{searchq}}}" type="text">
+        </div>        
+        {{{#if response}}}
+        <ul x-as="menu" x-bind="click: selectItem" class="autosuggest-menu" style="display:{:self.display}">
+            {{{#each response}}}
+            <li><a>{{{text}}}</a></li>
+            {{{/}}}
+        </ul>
+        {{{/}}}
+    </div>
