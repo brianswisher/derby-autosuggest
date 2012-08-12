@@ -1,18 +1,8 @@
+<import: src="./main">
+<import: src="./list">
 <Title:>
   {{title}}
 
 <Header:>
   <ui:connectionAlert>
 
-<Body:>
-    <div class="container-fluid">
-    <div class="hero-unit">        
-        <h2>Derby auto suggest component demo</h2>
-        <hr>
-        <label>Please enter your name:</label>
-        <input type="text" style="width:100%" value="{_user.name}">
-        <hr>
-        <label>Chose you favorite countries:</label>
-        <ui:autoSuggest response="{_countries}" searchq="{_searchq}" valuefield="{_user.countryIds}" selecteditems="{_selectedCountries}" cls="{{cls}}">            
-    </div>        
-    </div>    

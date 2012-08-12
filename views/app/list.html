@@ -1,0 +1,32 @@
+<Title:>
+  {{title}}
+
+<Header:>
+  <ui:connectionAlert>
+
+<Body:>
+    <div class="container-fluid">
+        <div class="well">
+        <h2>Favorite countries for {_user.name}</h2>
+        </div>        
+        
+        {#if _selectedCountries}
+        <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Country name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each _selectedCountries}
+                <tr>
+                    <td>{.text}</td>
+                </tr>
+                {/}
+            </tbody>
+        </table>
+        </div>
+        {/}
+        
+    </div>    
