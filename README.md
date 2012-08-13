@@ -8,8 +8,9 @@ Usage:
 <ui:autoSuggest response="{_yourlist}" searchq="{_searchq}" valuefield="{_wheretostorevals}" selecteditems="{_reflistofvals}" cls="{{componentclass}}">
 
 Known issues:
-1. Racer will through "Model bundling took longer than..." on first run
-2. Model.filter() returns an array of "unidentified" object, I suspect it's a Racer issue, for now using queries
+-------------
+1. Racer will through "Model bundling took longer than..." on first run.
+2. Model.filter() returns an array of "unidentified" object, I suspect it's a Racer issue, for now using queries.
 
 To-do:
 ------
