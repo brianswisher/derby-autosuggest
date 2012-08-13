@@ -1,5 +1,5 @@
 <autoSuggest:>
-    <div class="autoSuggest">
+    <div x-as="autosuggest" class="autoSuggest">
         <div x-as="searchcontainer" x-bind="click: setFocusCls focusInput" class="{{{cls}}}">
             {{{#if selecteditems}}}
                 <ul class="selections">
@@ -13,7 +13,7 @@
         {{{#if response}}}
         <ul x-as="menu" x-bind="click: selectItem" class="autosuggest-menu" style="display:{:self.display}">
             {{{#each response}}}
-            <li><a>{{{text}}}</a></li>
+            <li><a class="selection-text">{{{text}}}</a></li>
             {{{/}}}
         </ul>
         {{{/}}}

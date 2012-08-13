@@ -15,6 +15,9 @@ exports.create = function(model, dom) {
     // container div
     this.container = dom.element('searchcontainer');
 
+    // autosuggest wrapper
+    this.wrapper = dom.element('autosuggest');
+       
     // display/hide menu/response list indicator
     this.display = model.at('display')
 
@@ -39,8 +42,13 @@ exports.create = function(model, dom) {
     // Listen to click events so we could remove the "focused" class 
     // as well as hide the results menu if target element is neither our input 
     // or container.
-    dom.addListener(document.documentElement, 'click', function(e) {
-        if (e.target !== self.container && e.target !== self.input) self.delFocusCls();
+    dom.addListener(document.documentElement, 'click', function(e) {        
+        console.log(e.target);
+        if (e.target !== self.container && 
+            e.target !== self.input && 
+            !hasClass(e.target, 'selection-text') && 
+            !hasClass(e.target, 'selection-item')) self.delFocusCls();
+        
     })
 
     // Push item id to selected values, empty the input field and response
@@ -51,8 +59,9 @@ exports.create = function(model, dom) {
         model.set('searchq',''); // clear search input value
         model.set('response',[]); // clear response list 
         
-        self.setFocusCls();
         self.focusInput();
+        self.setFocusCls();
+        
     }
 
     // Delete item
@@ -79,3 +88,4 @@ function removeClass(ele,cls) {
                 ele.className=ele.className.replace(reg,' ');
         }
 }    
+
