@@ -9,7 +9,7 @@ Usage:
 
 Known issues:
 -------------
-1. Racer will through "Model bundling took longer than..." on first run.
+1. Racer will throw "Model bundling took longer than..." on first run.
 2. Model.filter() returns an array of "unidentified" object, I suspect it's a Racer issue, for now using queries.
 
 To-do:
