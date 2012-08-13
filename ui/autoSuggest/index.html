@@ -1,6 +1,6 @@
 <autoSuggest:>
-    <div x-as="autosuggest" class="autoSuggest">
-        <div x-as="searchcontainer" x-bind="click: setFocusCls focusInput" class="{{{cls}}}">
+    <div x-as="autosuggest" class="{{{cls}}}">
+        <div x-as="searchcontainer" x-bind="click: setFocusCls focusInput" class="{{{cls}}} autoSuggestBox">
             {{{#if selecteditems}}}
                 <ul class="selections">
                     {{{#each selecteditems}}}
