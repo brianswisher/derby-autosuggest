@@ -6,9 +6,9 @@ An auto-suggest component for Derby, plus working example. Use as you please.
 Usage example:
 ui:autoSuggest path="countries" field="{_user.countryIds}" cls="{{cls}}"
 
-path: collection path
-field: field where results are stored
-cls: your class
+- Path: Document path
+- Field: Target field where selections are stored
+- Cls: Your CSS class name
 
 Please post comments and feedbacks here:
 https://groups.google.com/forum/?fromgroups#!topic/derbyjs/4wIuKEEHrSg
