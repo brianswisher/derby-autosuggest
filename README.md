@@ -1,22 +1,38 @@
 Multi auto suggest component for Derby 
 ======================================
 
-
 An auto-suggest component for Derby, plus working example. Use as you please.
 
-Usage:
-<ui:autoSuggest response="{_yourlist}" searchq="{_searchq}" valuefield="{_wheretostorevals}" selecteditems="{_reflistofvals}" cls="{{componentclass}}">
+Usage example:
+ui:autoSuggest path="countries" field="{_user.countryIds}" cls="{{cls}}"
 
-Known issues:
--------------
-1. Racer will throw "Model bundling took longer than..." on first run.
-2. Model.filter() returns an array of "unidentified" object, I suspect it's a Racer issue, for now using queries.
+path: collection path
+field: field where results are stored
+cls: your class
 
-To-do:
-------
-1. Once the above are resolved; encapsulate all business logic inside the component itself
-2. Add "single" selection support
+Please post comments and feedbacks here:
+https://groups.google.com/forum/?fromgroups#!topic/derbyjs/4wIuKEEHrSg
+
+Vid:
+http://www.youtube.com/watch?v=FozQ65fHieM
+
+
+Changelog
+======================================
+14 August 2012
+- Refactored component to encapsulate all business logic
+- Updated example code
+
+
+
+To-Do
+======================================
+1. Add "single/multiple" selection param
 3. Add support to chose either filtering (client side) or quering. The use of "in" in query motifs is currently broken in Racer.
 4. Look into how to pass dynamic field names to components; i.e. right now the component relies on {{{.text}}} for display, the path.text needs to be dynamic.
 
-Comments and feedbacks are welcome. 
+
+
+Notes
+======================================
+Make sure you download the latest version of Racer

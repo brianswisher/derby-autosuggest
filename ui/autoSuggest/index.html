@@ -1,20 +1,20 @@
 <autoSuggest:>
-    <div x-as="autosuggest" class="{{{cls}}}">
-        <div x-as="searchcontainer" x-bind="click: setFocusCls focusInput" class="{{{cls}}} autoSuggestBox">
-            {{{#if selecteditems}}}
+    <div x-as="autosuggest" class="{{{cls}}}">                
+        <div x-as="searchcontainer" x-bind="click: setFocusCls focusInput" class="{{{cls}}} autoSuggestBox">                                                
+            {#if ._selectedItems}                        
                 <ul class="selections">
-                    {{{#each selecteditems}}}
-                    <li class="selection-item"><a class="close" x-bind="click: deleteItem">x</a>{{{text}}}</li>
-                    {{{/}}}
+                    {#each :self._selectedItems}
+                    <li class="selection-item"><a class="close" x-bind="click: deleteItem">x</a>{.text}</li>
+                    {/}
                 </ul>            
-            {{{/}}}
-            <input x-as="searchinput" x-bind="focus: setFocusCls" value="{{{searchq}}}" type="text">
-        </div>        
-        {{{#if response}}}
-        <ul x-as="menu" x-bind="click: selectItem" class="autosuggest-menu" style="display:{:self.display}">
-            {{{#each response}}}
-            <li><a class="selection-text">{{{text}}}</a></li>
-            {{{/}}}
+            {/}
+            <input x-as="searchinput" x-bind="focus: setFocusCls" value="{._searchq}" type="text">
+        </div>                     
+        {#if ._response}
+        <ul x-as="menu" x-bind="click: selectItem" class="autosuggest-menu" style="display:{:self._display}">
+            {#each :self._response}
+            <li><a class="selection-text">{.text}</a></li>
+            {/}
         </ul>
-        {{{/}}}
+        {/}
     </div>
