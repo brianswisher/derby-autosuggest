@@ -1,6 +1,6 @@
 {
-  "name": "toulk",
-  "description": "Toulk.com",
+  "name": "autocomplete",
+  "description": "component plus demo",
   "version": "0.0.0",
   "main": "./server.js",
   "dependencies": {
